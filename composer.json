@@ -1,0 +1,38 @@
+{
+    "name": "monumentix/boilerplate",
+    "description": "Boilerplate from Yii 2 Advanced Application Template",
+    "keywords": ["yii2", "framework", "advanced", "application template"],
+    "homepage": "http://sample.com",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "http://sample.com/help",
+        "forum": "http://sample.com/help",
+        "wiki": "http://sample.com/help",
+        "source": "http://github.com/example/repo"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-swiftmailer": "*",
+	"dektrium/yii2-user": "*",
+	"yiisoft/yii2-authclient": "*"
+    },
+    "require-dev": {
+        "yiisoft/yii2-codeception": "*",
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*",
+        "yiisoft/yii2-faker": "*"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
