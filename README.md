@@ -1,3 +1,5 @@
+#THIS NEEDS UPDATING BUT FOR NOW THIS IS THE FILE STRUCTURE FROM THE TEMPLATE
+
 Yii 2 Advanced Application Template
 ===================================
 
