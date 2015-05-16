@@ -1,0 +1,57 @@
+/* 
+    Document   : likeagramSearch
+    Created on : Dec 19, 2014, 9:23:31 PM
+    Author     : Rizza
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.likeagram-search-index h3{margin-top:10px !important;}
+.likeagram-search-index #searchForm{margin-top:10px;}
+.field-searchform-searchterms{display: inline-block; min-width: 300px;}
+#searchForm .form-group{margin-bottom: 0px;}
+#searchForm button{text-shadow: 1px 2px 0px #000; }
+
+
+
+.media-item{max-height: 300px; margin:10px; display: inline-block;}
+.media-item .mediaImage {max-height: 300px;}
+.profile-header .likescount{font-size: 12px !important; float: right; }
+.profile-header .profile-picture{float: left; max-width: 35px; margin-right: 10px; box-shadow: #000 2px 2px 1px;}
+.profile-header .profile-posted-ago{display:block; font-size: 12px;}
+
+.likescount .glyphicon{font-size: 16px !important;   }
+.profile-wrapper{overflow: hidden; position: relative;}
+.profile-wrapper:hover .media-post-summary{bottom:0px; display: block; z-index: 1;}
+.media-item .media-post-summary{
+    min-height:50px; margin: 0px; 
+    padding: 5px; width: 100%; 
+    font-size:14px; bottom: 100%; 
+    -webkit-transition: bottom 0.3s ease-in-out; 
+    -moz-transition: bottom 0.3s ease-in-out; 
+    -o-transition: bottom 0.3s ease-in-out; 
+    transition: bottom 0.3s ease-in-out;     
+    position: absolute; background-color: #eee; opacity: .90;        
+}
+
+.more-text a:hover{text-decoration: none !important;}
+.tag-filter{display: inline-block !important; margin:4px; font-size:90% !important; }
+.likeagram-explore-feed{margin-bottom:20px;}
+/*End Media-Grid Properties*/
+
+
+
+#mediaDetailModalWrapper .modal-header .close{margin-top: -16px; font-size: 32px !important;}
+#mediaDetailModalWrapper .modal-media-detail .modal-dialog {width: 960px !important; }
+#mediaDetailModalWrapper .profile-picture{max-height: 65px; margin-right: 10px;}
+#mediaDetailModalWrapper .profile-wrapper .profile-username{color:#333 !important; margin-top: 0px !important;}
+#mediaDetailModalWrapper .profile-wrapper .profile-posted-ago{color:#333 !important;}
+#mediaDetailModalWrapper  .comments-title{margin:0px 0px 4px 0px !important; color:#333 !important;}
+#mediaDetailModalWrapper .comments-wrapper {max-height: 400px; overflow-y: scroll;}
+#mediaDetailModalWrapper .comments-wrapper img.img {height: 40px; margin-right:10px; }
+#mediaDetailModalWrapper .comments-wrapper .comments-comment{font-size:12px; min-height: 50px; }
+#mediaDetailModalWrapper .media-post-summary .caption-text{margin:auto auto; width:100%; text-align: left; padding: 5px;}
+
+#mediaDetailModalWrapper .comments-wrapper .comments-comment .comment-profile-image{height:45px; width:45px;}
+#mediaDetailModalWrapper .comments-wrapper .comments-comment .comment-username{}
+#mediaDetailModalWrapper .comments-wrapper .comments-comment .comment-text{}

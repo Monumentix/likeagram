@@ -8,20 +8,13 @@ $params = array_merge(
 
 return [
     'id' => 'app-frontend',
-    'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
-    'controllerNamespace' => 'frontend\controllers',
+    'basePath' => dirname(__DIR__),        
+    'controllerNamespace' => 'frontend\controllers',    
     'components' => [
-/*	
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
         ],
-*/
-	'user' => [
-		'class' => 'dektrium\user\Module',
-	],
-	
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -31,11 +24,47 @@ return [
                 ],
             ],
         ],
+        /*
+        'urlManager' =>[
+            'enablePrettyUrl' => true,
+            'showScriptName' => true,	
+            'rules' => [
+
+                /*
+                '<controller:(default|explore)>/' => 'likeagram/<controller>/index',
+                '<controller:(default|explore)>/<action>' => 'likeagram/<controller>/<action>',          
+                                  
+            ],
+        ],
+        */
+        
+        'view'=>[
+            'theme' =>[
+                'pathMap'=>[
+                    '@dektrium/user/views' => '@app/modules/likeagram/views/overrides/yii2-user',
+                ],
+            ],
+        ],    
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
     ],
-
-
-  'params' => $params,
+    'modules'=>[               
+        'likeagram' => [
+            'class' => 'app\modules\likeagram\Module',
+        ], 
+        'user' => [          
+            'controllerMap' => [
+                'social' => 'app\modules\likeagram\controllers\SocialController',
+                'settings' => 'app\modules\likeagram\controllers\SettingsController',
+            ],              
+        ],
+        /*
+        'debug' => [
+            'class' => 'yii\debug\Module',
+            'allowedIPs' => ['1.2.3.4', '127.0.0.1', '::1', '173.3.95.104'],
+        ],
+          */
+    ],    
+    'params' => $params,
 ];

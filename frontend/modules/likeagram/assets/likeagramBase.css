@@ -1,0 +1,9 @@
+/*General Module Level Properties*/
+body{font-family: 'Oswald', sans-serif !important; font-size: 16px !important;}
+body.wait, body.wait *{
+    cursor: wait !important;
+}
+.wrap {background-color: #222;  /* background: url("bg_light.jpg"); */   }
+#contentWrapper{background-color: transparent; padding:50px 0px 0px 0px !important;}
+.footer{background-color: #444 !important; border:1px solid #000 !important; padding:10px !important; color: #eee !important;}
+h1, h2, h3, h4, h5{color: #efefef !important; margin:5px 0px 0px 0px;}
