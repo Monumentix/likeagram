@@ -48,9 +48,10 @@ if(!isset($columnSettings)){$columnSettings = 'col-xs-12 col-sm-4 col-md-3 col-l
                             </div>
                         </div>
                     </a>
-                <? endif ?>            
-                 
+                <? endif; ?>                             
                  
             </div>
+
         <?php endforeach; ?>       
+
     <div id="media-pager" class="media-pager-wrapper" data-link="<?=$pager;?> "></div>         

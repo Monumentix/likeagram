@@ -49,16 +49,18 @@
     <div class="grid-sizer"></div>
     <?php
 
-        if(!isset($columnSettings)){$columnSettings = 'col-xs-12 col-sm-4 col-md-3 col-lg-3';}
+        if(!isset($columnSettings))
+	{$columnSettings = 'col-xs-12 col-sm-4 col-md-3 col-lg-3';}
 
-        echo $this->render('mediaGrid', 
+	echo $this->render('mediaGrid', 
                 [
                 'firstPage'=>$firstPage,
                 'columnSettings'=>$columnSettings,
                 'media'=>$media,
                 'pager'=>$pager,
                 ]
-            );
+         );
+	
     ?>        
 </div>
 <div class="row"></div>

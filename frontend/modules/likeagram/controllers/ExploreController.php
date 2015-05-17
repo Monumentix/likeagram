@@ -94,6 +94,9 @@ class ExploreController extends Controller
         
     }//end actionSearch
 
+
+
+
    
     
     
@@ -138,12 +141,17 @@ class ExploreController extends Controller
     {       
         $client = new Instagram();
         $media = $client->getUserFeed();
-        return $this->render('feed', 
-            [             
+
+    return $this->render('feed',
+	[
              'media' => $media,
             ]
-        );                        
+        );
+
+	                        
     }//end feed action    
+
+
 
     
     public function actionNext(){         
