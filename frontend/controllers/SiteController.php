@@ -67,16 +67,16 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        $this->redirect('/likeagram/selfie');        
-        //return $this->render('index');
+        //$this->redirect('/likeagram/selfie');
+        return $this->render('index');
     }
-    
+
     public function actionTest($id){
-        
+
         echo "test:".$id.":";
     }
-    
-    
+
+
     public function actionLogin()
     {
         if (!\Yii::$app->user->isGuest) {
