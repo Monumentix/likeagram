@@ -12,7 +12,7 @@
         }
     ?>
     
-    <?  
+    <?php  
         /*
         if(!empty($media['data'])){        
             echo $this->render('_views/media', 

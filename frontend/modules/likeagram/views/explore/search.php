@@ -7,7 +7,7 @@
   
 
 <div class="col-xs-8 col-sm-6 col-md-7 col-lg-8 likeagram-explore-feed ">    
-    <?  
+    <?php
         if(!empty($media['data'])){        
             echo $this->render('_views/media', 
                 [

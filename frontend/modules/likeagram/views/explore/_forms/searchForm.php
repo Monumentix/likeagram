@@ -24,7 +24,7 @@ $form = ActiveForm::begin([
         ) 
         ?>
     </span>
-    <?
+    <?php
     // Form field without label
     echo $form->field($searchForm, 'searchTerms', [
     'inputOptions' => [
