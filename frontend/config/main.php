@@ -26,6 +26,7 @@ return [
         ],
         
         'urlManager' =>[
+      /*
             'enablePrettyUrl' => true,
             'showScriptName' => false,	
             'rules' => [
@@ -33,8 +34,9 @@ return [
                 /*
                 '<controller:(default|explore)>/' => 'likeagram/<controller>/index',
                 '<controller:(default|explore)>/<action>' => 'likeagram/<controller>/<action>',          
-                 */                 
+                                 
             ],
+*/
         ],
         
         

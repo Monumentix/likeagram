@@ -74,7 +74,7 @@ class ExploreController extends Controller
             */
             
             
-            return $this->render('search',
+            return  $this->render('search',
                 [
                     'media'=>$media,
                     'searchForm'=>$searchForm,                
@@ -82,12 +82,12 @@ class ExploreController extends Controller
             );
             
             
-        }else{            
-            $media = $client->getPopular();                        
+        }else{
+            $media = $client->getPopular();
             return $this->render('search',
                 [
                     'media'=>$media,
-                    'searchForm'=>$searchForm,                
+                    'searchForm'=>$searchForm
                 ]
             );
         } 
@@ -163,3 +163,5 @@ class ExploreController extends Controller
    
    
 }//end class
+
+?>
