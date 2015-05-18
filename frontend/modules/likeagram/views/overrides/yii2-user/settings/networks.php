@@ -21,7 +21,7 @@ $this->title = Yii::t('user', 'Networks');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<?//We already commented out what the internals of the view //  = $this->render('/_alert') ?>
+<?php //We already commented out what the internals of the view //  = $this->render('/_alert') ?>
 
 <div class="row">
     <div class="col-md-3">
