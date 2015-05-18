@@ -82,7 +82,7 @@
 
                     });
 
-                    iso.layout();
+                  //  iso.layout();
                 });
 
                 var imgLoad = imagesLoaded(selfieGrid);
@@ -99,7 +99,7 @@
                         selfiePage = 1;
                     }
                     $('#selfieGrid').children().removeClass('hidden');
-                    iso.layout();
+                  //  iso.layout();
                 });
 
                 /*
