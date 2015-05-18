@@ -45,9 +45,12 @@
 
                  selfieGrid.prepend(newElements);
 
+                 /*
                 $.each(newElements, function(i, val){
                     selfieGrid.append(val);
                       //iso.append(val);
+
+
                     if(selfiePage === 1){
                         $('#selfieGrid .second').remove();
                         selfiePage = 2;
@@ -59,10 +62,12 @@
                         selfiePage = 1;
                     }
 
+
                     $('#selfieGrid .tagWall').addClass('reveal');
 
 
-                    selfieGrid.prepend(val);
+                      //selfieGrid.prepend(val);
+
                         var imgLoad = imagesLoaded(selfieGrid);
                         imgLoad.on('done', function(instance){
                         //selfieGrid.height(window.innerHeight);
@@ -84,7 +89,9 @@
 
                   //  iso.layout();
                 });
+                */
 
+                
                 var imgLoad = imagesLoaded(selfieGrid);
                 imgLoad.on('done', function(instance){
                     //Get our old items of the dom
