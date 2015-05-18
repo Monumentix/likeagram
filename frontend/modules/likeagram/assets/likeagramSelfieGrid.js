@@ -4,6 +4,7 @@
  */
 
 
+/*
     var iso = new Isotope('#selfieGrid',{
         itemSelector: '.selfieItem',
         (layoutMode: 'fitRows'
@@ -13,6 +14,7 @@
     }) ;
 
     iso.bindResize();
+*/
 
 
     var timeout = setInterval(selfieGrid,6500);
@@ -21,8 +23,6 @@
     selfieGrid();
 
     function selfieGrid(){
-
-
         //Build our ISO OBJ
         $.get('selfie/next',{}, function(data){
         //add data to placeholder div to turn to dom object
@@ -47,9 +47,7 @@
 
                 $.each(newElements, function(i, val){
                     selfieGrid.append(val);
-
-                    iso.append(val);
-
+                      //iso.append(val);
                     if(selfiePage === 1){
                         $('#selfieGrid .second').remove();
                         selfiePage = 2;
@@ -63,12 +61,13 @@
 
                     $('#selfieGrid .tagWall').addClass('reveal');
 
-                    
+
                     selfieGrid.prepend(val);
                         var imgLoad = imagesLoaded(selfieGrid);
                         imgLoad.on('done', function(instance){
                         //selfieGrid.height(window.innerHeight);
-                        iso.prepended(val);
+                        //iso.prepended(val);
+
                             //Get our old items of the dom
                             if(selfiePage === 1){
                                 $('#selfieGrid .second').remove();
