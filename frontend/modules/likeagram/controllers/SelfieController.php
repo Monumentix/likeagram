@@ -19,39 +19,42 @@ class SelfieController extends Controller
               /*[
                   'allow'=>true,
                   'actions'=>['index'],
-                  'roles' => ['?'],    
+                  'roles' => ['?'],
               ],*/
               [
                   'allow' => true,
                   'actions'=>['index'],
-                  'roles' => ['@'],    
+                  'roles' => ['@'],
               ],
             ],//end rules
-          ],  
+          ],
         ];
     }
-    
-    
+
+
     public function actionIndex()
-    {       
-        $client = new Instagram();  
-        $media = $client->getTagsMedia('selfie');            
-        
+    {
+        $client = new Instagram();
+        $media = $client->getTagsMedia('selfie');
+
+
+
         return $this->render('index',[
                  'media'=>$media,
-        ]);        
-    }
-    
-    public function actionNext(){
-        $client = new Instagram();  
-        $media = $client->getTagsMedia('selfie');    
+        ]);
         
+    }
+
+    public function actionNext(){
+        $client = new Instagram();
+        $media = $client->getTagsMedia('selfie');
+
         return $this->renderPartial('grid/selfie',[
             'media'=>$media,
-            'firstPage' => false, 
-        ]);        
+            'firstPage' => false,
+        ]);
     }
-        
-    
-    
+
+
+
 }//end class
