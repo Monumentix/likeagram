@@ -3,16 +3,17 @@
  * and open the template in the editor.
  */
 
-    /*
+
     var iso = new Isotope('#selfieGrid',{
         itemSelector: '.selfieItem',
-        /*(layoutMode: 'fitRows'
+        (layoutMode: 'fitRows'
           masonry: {
             columnWidth: 185
             }
-    });
+    }) ;
+
     iso.bindResize();
-    */
+
 
     var timeout = setInterval(selfieGrid,6500);
     var selfiePage = 1;
@@ -42,13 +43,27 @@
                 var nextPageGrid = $('#nextPagePlaceholder');
                 var newElements = nextPageGrid.children().slice(0);
 
-                // selfieGrid.prepend(newElements);
+                 selfieGrid.prepend(newElements);
 
                 $.each(newElements, function(i, val){
                     selfieGrid.append(val);
+
                     iso.append(val);
+
+                    if(selfiePage === 1){
+                        $('#selfieGrid .second').remove();
+                        selfiePage = 2;
+                    }else if(selfiePage === 2){
+                        $('#selfieGrid .third').remove();
+                        selfiePage = 3;
+                    }else if(selfiePage === 3){
+                        $('#selfieGrid .first').remove();
+                        selfiePage = 1;
+                    }
+
                     $('#selfieGrid .tagWall').addClass('reveal');
 
+                    
                     selfieGrid.prepend(val);
                         var imgLoad = imagesLoaded(selfieGrid);
                         imgLoad.on('done', function(instance){
@@ -65,10 +80,10 @@
                                 $('#selfieGrid .first').remove();
                                 selfiePage = 1;
                             }
-                        iso.layout();
+
                     });
 
-
+                    iso.layout();
                 });
 
                 var imgLoad = imagesLoaded(selfieGrid);
