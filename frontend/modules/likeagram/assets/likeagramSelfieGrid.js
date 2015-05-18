@@ -22,20 +22,19 @@
     function selfieGrid(){
 
 
-
         //Build our ISO OBJ
         $.get('selfie/next',{}, function(data){
         //add data to placeholder div to turn to dom object
         //and assign the correct page numbers
-        $('#nextPagePlaceholder').prepend(data);
+        $('#nextPagePlaceholder').append(data);
             if(selfiePage === 1){
-                $('#nextPagePlaceholder').children().addClass(' first ');
+                $('#nextPagePlaceholder').children().addClass(' first hidden');
             }
             if(selfiePage === 2){
-                $('#nextPagePlaceholder').children().addClass(' second ');
+                $('#nextPagePlaceholder').children().addClass(' second hidden');
             }
             if(selfiePage === 3){
-                $('#nextPagePlaceholder').children().addClass(' third ');
+                $('#nextPagePlaceholder').children().addClass(' third hidden);
             }
                 //Create our grid oject
                 var selfieGrid = $('#selfieGrid');
@@ -46,10 +45,10 @@
                 // selfieGrid.prepend(newElements);
 
                 $.each(newElements, function(i, val){
-                    selfieGrid.prepend(val);
-                    iso.prepended(val);
+                    selfieGrid.append(val);
+                    iso.append(val);
                     $('#selfieGrid .tagWall').addClass('reveal');
-                    /*
+
                     selfieGrid.prepend(val);
                         var imgLoad = imagesLoaded(selfieGrid);
                         imgLoad.on('done', function(instance){
@@ -68,7 +67,7 @@
                             }
                         iso.layout();
                     });
-                    */
+                    
 
                 });
 
