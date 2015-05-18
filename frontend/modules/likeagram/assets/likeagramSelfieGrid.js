@@ -27,7 +27,7 @@
         $.get('selfie/next',{}, function(data){
         //add data to placeholder div to turn to dom object
         //and assign the correct page numbers
-        $('#nextPagePlaceholder').append(data);
+        $('#nextPagePlaceholder').prepend(data);
             if(selfiePage === 1){
                 $('#nextPagePlaceholder').children().addClass(' first ');
             }
