@@ -34,7 +34,7 @@
                 $('#nextPagePlaceholder').children().addClass(' second hidden');
             }
             if(selfiePage === 3){
-                $('#nextPagePlaceholder').children().addClass(' third hidden);
+                $('#nextPagePlaceholder').children().addClass(' third hidden');
             }
                 //Create our grid oject
                 var selfieGrid = $('#selfieGrid');
@@ -67,7 +67,7 @@
                             }
                         iso.layout();
                     });
-                    
+
 
                 });
 
